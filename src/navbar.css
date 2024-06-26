@@ -1,0 +1,175 @@
+
+/* Navbar */
+#menu {
+    background: #3AA6B9;
+    height: 75px;
+    border-radius: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Untuk memastikan menu berada di atas elemen lainnya */
+}
+
+#menu ul, #menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul {
+    width: 100%;
+    text-align: right;
+}
+
+#menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 75px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+#menu li a:hover {
+    color: #0099CC;
+    background: #F2F2F2;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#menu label {
+    display: none;
+    line-height: 75px;
+    text-align: center;
+    position: absolute;
+    left: 35px;
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    color: #FFFFFF;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block;
+}
+
+#menu ul.sub-menus a:hover {
+    background: #F2F2F2;
+    color: #444444;
+}
+
+/* banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#video-background iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparansi hitam */
+    z-index: 2;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* menu baner */
+.menu-banner{
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    z-index: 2;
+
+}
+.menu-banner nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 5;
+    text-align: left;
+}
+
+.menu-banner nav ul li {
+    display: block;
+    margin: 0 15px 20px;
+}
+
+.menu-banner nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+ 

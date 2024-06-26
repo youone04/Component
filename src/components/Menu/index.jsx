@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 export default function Menu({ hideMenu = false, children }) {
     const menuRef = useRef(null);
     let lastScrollTop = useRef(0);
-
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -25,13 +24,14 @@ export default function Menu({ hideMenu = false, children }) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     return (
         <>
             <div className="menu" id="menu" ref={menuRef}>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>

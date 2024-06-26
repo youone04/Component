@@ -1,17 +1,12 @@
-import Banner from "@components/Banner";
-import Content from "@components/Content";
-import Menu from "@components/Menu";
+import Content from "@/components/Content";
+import TempplatePage from "@/components/TempplatePage";
 
 export default function Home() {
     return (
         <>
-            <Menu hideMenu={false}>
-                <Banner
-                    // menucomp={''}
-                    title="Welcome to Our Website"
-                    descripsi="Enjoy your stay!" />
-            </Menu>
-            <Content title="Haloo" content="kami sedang" />
+        <TempplatePage>
+            <Content/>
+        </TempplatePage>
         </>
     )
 }
