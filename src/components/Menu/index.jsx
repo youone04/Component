@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Menu({ hideMenu = false, children }) {
     const menuRef = useRef(null);
@@ -30,10 +31,9 @@ export default function Menu({ hideMenu = false, children }) {
             <div className="menu" id="menu" ref={menuRef}>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/stiky">Stiky</Link></li>
                     </ul>
                 </nav>
             </div>
