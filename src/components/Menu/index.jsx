@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import NavMod from "@components/atom/NavMod";
 
 export default function Menu({ hideMenu = false, children }) {
     const menuRef = useRef(null);
@@ -29,13 +29,7 @@ export default function Menu({ hideMenu = false, children }) {
     return (
         <>
             <div className="menu" id="menu" ref={menuRef}>
-                <nav>
-                    <ul>
-                        <li><Link to={'/'}>Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/stiky">Stiky</Link></li>
-                    </ul>
-                </nav>
+                <NavMod/>
             </div>
             {children}
         </>
