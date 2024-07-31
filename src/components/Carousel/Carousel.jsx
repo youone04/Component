@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Carousel.css';
 
 const Carousel = ({ images }) => {
@@ -19,30 +19,27 @@ const Carousel = ({ images }) => {
   };
 
   const currentImage = images[currentIndex];
-
-  useEffect(() => {
-    document.body.style.backgroundImage = `url(${currentImage.src})`;
-  }, [currentImage]);
-
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" style={{ backgroundImage: `url(${currentImage.src})` }}>
+      <button className="carousel-control prev" onClick={prevSlide}>{'<'}</button>
+
       <div className="carousel">
         <div className="carousel-track" style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}>
           {images.map((image, index) => (
             <div
-              className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
+              className={`carousel-item`}
               key={index}
               onClick={() => onClickItem(index)}
-              style={index === currentIndex ? { border: '3px solid #3AA6B9' } : {  }}
+              style={index === currentIndex ? { border: '3px solid #3AA6B9' } : {}}
             >
               <img src={image.src} alt={`Gambar ${index + 1}`} />
             </div>
           ))}
         </div>
+        <div className="carousel-description">{currentImage.description}</div>
+
       </div>
-      <div className="carousel-description">{currentImage.description}</div>
-      <button className="carousel-control prev" onClick={prevSlide}>Previous</button>
-      <button className="carousel-control next" onClick={nextSlide}>Next</button>
+      <button className="carousel-control next" onClick={nextSlide}>{'>'}</button>
     </div>
   );
 };

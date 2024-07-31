@@ -1,4 +1,5 @@
 import Carousel from "@/components/Carousel/Carousel";
+import TempplatePage from "@/components/TempplatePage";
 
 const images = [
     { src: 'https://wallpapercave.com/uwp/uwp4441818.jpeg', description: 'Keterangan untuk Gambar 1' },
@@ -23,10 +24,12 @@ const images = [
 
 
 
-  ];
+];
 const CarouselPage = () => {
-    return(
-        <Carousel images={images}/>
+    return (
+        <TempplatePage>
+            <Carousel images={images} />
+        </TempplatePage>
     )
 }
 
