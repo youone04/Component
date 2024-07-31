@@ -1,13 +1,11 @@
-const StikySectionHeader = ({children, header}) => {
+const StikySectionHeader = ({ children, header }) => {
     return (
-        <>
-            <section>
-                <header className="section-header">
-                    <h2>{header}</h2>
-                </header>
-               {children}
-            </section>
-        </>
+        <section>
+            <header className="section-header">
+                <h2>{header}</h2>
+            </header>
+            {children}
+        </section>
     )
 }
 

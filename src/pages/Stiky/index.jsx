@@ -4,7 +4,6 @@ import TempplatePage from "@/components/TempplatePage";
 const Stiky = () => {
     return (
         <TempplatePage>
-            
             <StikySectionHeader header={"Header 1"}>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum imperdiet

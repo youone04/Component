@@ -19,6 +19,7 @@ section {
     position: sticky;
     top: 75px;
     z-index: 1;
+    border-radius: 20px;
 }
 
 .section-header h2 {
