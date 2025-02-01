@@ -7,8 +7,8 @@ const NavMod = () => {
                 <li><Link to={'/'}>Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/stiky">Stiky</Link></li>
-                <li><Link to="/carousel">Carousel</Link></li>
-                <li><Link to="/resizable-sidebar">Resizable Sidebar</Link></li>
+                <li><Link to="/carousePage">Carousel</Link></li>
+                <li><Link to="/resizablesidebar">Resizable Sidebar</Link></li>
             </ul>
         </nav>
     )
